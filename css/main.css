@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.result{
+    /*border: 2px solid red;*/
+    background-color: red;
+    color: white;
+}
+
+form #case{
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+form label{
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+form label:after{
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s;
+}
+
+#case:checked+label:after{
+    width: 100%;
+}
+
+#case:checked+label{
+    text-transform: capitalize;
+}
